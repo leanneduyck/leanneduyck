@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="css\style.production.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <title>LD: Projects</title>
     <link
       rel="shortcut icon"
@@ -36,6 +36,14 @@
             >
           </li>
           <li role="presentation">
+            <a
+              href="work.html"
+              role="menuitem"
+              class="navigation-list__item navigation-list__item--active"
+              >Projects</a
+            >
+          </li>
+          <li role="presentation">
             <a href="about.html" role="menuitem" class="navigation-list__item"
               >About</a
             >
@@ -52,78 +60,118 @@
       <section>
         <h1 class="workpage__header">My Projects...</h1>
         <div class="grid">
-          <a href="*" target="_blank" class="grid__item">
-            <h3>Project A</h3>
-            <p>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </p>
-          </a>
-          <a href="*" target="_blank" class="grid__item">
-            <h3>Project B</h3>
-            <p>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </p>
-          </a>
-          <a href="*" target="_blank" class="grid__item">
-            <h3>Project C</h3>
-            <p>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </p>
-          </a>
-          <a href="*" target="_blank" class="grid__item">
-            <h3>Project D</h3>
-            <p>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </p>
-          </a>
-          <a href="*" target="_blank" class="grid__item">
-            <h3>Project E</h3>
-            <p>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </p>
-          </a>
-          <a href="*" target="_blank" class="grid__item">
-            <h3>Project F</h3>
-            <p>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </p>
-          </a>
+          <div class="grid__item">
+            <a href="https://meet-puce-kappa.vercel.app/" target="_blank">
+              <img
+                src="MeetAppScreenshot.png"
+                alt="Screenshot of Meet App"
+                class="grid__item-img"
+              />
+              <div class="overlay">
+                <div class="grid__item-text">
+                  <h3>Meet App</h3>
+                  <p>
+                    The Meet App is an event management tool built using
+                    <em>React</em> and deployed as a <em>PWA</em>, ensuring
+                    seamless offline functionality. It uses
+                    <em>Google Calendar API</em> integration for real-time event
+                    data retrieval, <em>AWS Lambda</em> for serverless
+                    processing, and secure user authentication via
+                    <em>Google OAuth 2.0</em>. <em>Recharts</em> improves user
+                    experience with dynamic data visualization.
+                    <em>Puppeteer</em> and <em>Jest</em> facilitate testing,
+                    ensuring reliability across different testing scenarios.
+                  </p>
+                  <p>This app was built in June, 2024.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid__item">
+            <a href="https://main--react-mymovies.netlify.app/" target="_blank">
+              <img
+                src="MyMovies-Client-Screenshot2.png"
+                alt="Screenshot of MyMovies App"
+                class="grid__item-img"
+              />
+              <div class="overlay">
+                <div class="grid__item-text">
+                  <h3>MyMovies App</h3>
+                  <p>
+                    The MyMovies App is built using
+                    <em>React</em> and deployed on <em>Netlify</em>. It features
+                    a user-friendly interface with dynamic search functionality
+                    powered by <em>Fuse</em>, allowing users to browse a movie
+                    collection, and it supports CRUD operations for managing
+                    user data through the MyMovies-Server API.
+                    <em>React Bootstrap</em> and <em>SCSS</em> enhance the
+                    visual appeal and responsiveness, while
+                    <em>Redux</em> manages state and <em>Parcel</em> handles
+                    bundling; the backend is built with <em>Node.js</em>,
+                    <em>Express</em>, and <em>MongoDB Atlas</em>, and is
+                    deployed on <em>Heroku</em>.
+                  </p>
+                  <p>This app was built in April, 2024.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid__item">
+            <a href="https://to-do-list-redux-app.netlify.app/" target="_blank">
+              <img
+                src="ToDoAppScreenshot.png"
+                alt="Screenshot of Todo List App"
+                class="grid__item-img"
+              />
+              <div class="overlay">
+                <div class="grid__item-text">
+                  <h3>To Do List App</h3>
+                  <p>
+                    This <em>ReactJS</em> application, rebuilt from a vanilla
+                    JavaScript todo-list-app, integrates <em>Redux</em> for
+                    robust state management. Key functionalities include adding,
+                    toggling, and deleting todo items, with support for keyboard
+                    input to swiftly add tasks. This app employs
+                    <em>Bootstrap-React</em> for a responsive user interface,
+                    complemented by deployment on <em>Netlify</em> for seamless
+                    continuous integration and hosting, demonstrating
+                    proficiency in ReactJS, Redux, <em>Parcel</em> bundler,
+                    React Bootstrap, and deployment workflows.
+                  </p>
+                  <p>This app was built in May, 2024.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid__item">
+            <a
+              href="https://leanneduyck.github.io/planting-by-zones-js/"
+              target="_blank"
+            >
+              <img
+                src="PlantingByZonesScreenshot.png"
+                alt="Planting by Zones App"
+                class="grid__item-img"
+              />
+              <div class="overlay">
+                <div class="grid__item-text">
+                  <h3>To Do List App</h3>
+                  <p>
+                    The Planting by Zones JS app allows users to discover their
+                    local hardiness zone and access a tailored planting calendar
+                    by simply entering a zipcode. Using <em>HTML</em> for
+                    structure and <em>JavaScript</em> for frontend
+                    functionality, the app seamlessly integrates with a
+                    <em>third-party API</em> to fetch and display zone-specific
+                    planting information. The responsive UI is built with
+                    <em>CSS</em> as well as <em>Bootstrap</em>
+                    delivers a user-friendly gardening resource.
+                  </p>
+                  <p>This app was built in March, 2024.</p>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
       </section>
     </main>
