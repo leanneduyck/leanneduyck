@@ -63,11 +63,17 @@
           class="profile__portrait"
           alt="LD Portrait"
         />
-        <h1>Hello!</h1>
-        <h2>I am <span class="change_text"> </span></h2>
-        <a href="work.html" class="workpage-link"
+        <h2>I am <span class="main-name">Leanne Duyck</span></h2>
+        <ul class="descriptor-list">
+          <li class="descriptor-item">a detail-oriented software developer</li>
+          <li class="descriptor-item">a creative problem-solver</li>
+          <li class="descriptor-item">an effective communicator</li>
+          <li class="descriptor-item">an organized project manager</li>
+          <li class="descriptor-item">an experienced analytical thinker</li>
+        </ul>
+        <!-- <a href="work.html" class="workpage-link"
           >visit my portfolio projects here!</a
-        >
+        > -->
       </div>
     </main>
     <footer class="page-footer">
@@ -79,7 +85,7 @@
           class="social-media__item"
         >
           <img
-            src="img\github-icon.svg"
+            src="img/icons8-github-100.png"
             alt="github icon"
             class="social-media__item"
           />
@@ -90,7 +96,7 @@
           class="social-media__item"
         >
           <img
-            src="img\instagram-icon.svg"
+            src="img/icons8-instagram-100.png"
             alt="instagram icon"
             class="social-media__item"
           />
@@ -101,7 +107,7 @@
           class="social-media__item"
         >
           <img
-            src="img\linkedin-icon.svg"
+            src="img/icons8-linkedin-100.png"
             alt="linkedin icon"
             class="social-media__item"
           />
@@ -117,5 +123,21 @@
         />
       </div>
     </footer>
+    <script>
+      const descriptors = document.querySelectorAll(".descriptor-item");
+      let index = 0;
+
+      function showNextDescriptor() {
+        if (index < descriptors.length) {
+          descriptors[index].classList.add("visible");
+          index++;
+          // 2-second delay between each descriptor
+          setTimeout(showNextDescriptor, 2000);
+        }
+      }
+
+      // start after a 2-second delay
+      setTimeout(showNextDescriptor, 1500);
+    </script>
   </body>
 </html>

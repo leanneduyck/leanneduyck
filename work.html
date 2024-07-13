@@ -63,17 +63,17 @@
           <div class="grid__item">
             <a href="https://meet-puce-kappa.vercel.app/" target="_blank">
               <img
-                src="MeetAppScreenshot.png"
-                alt="Screenshot of Meet App"
+                src="chat_app_screenshot.png"
+                alt="Screenshot of Chat App"
                 class="grid__item-img"
               />
               <div class="overlay">
                 <div class="grid__item-text">
                   <h3>Chat App</h3>
                   <p>
-                    This <em>React Native</em> app uses modern technologies such
-                    as <em>Firebase/Firebase Storage</em> for real-time data
-                    storage and offline capabilities, and
+                    This <em>React Native</em> app uses
+                    <em>Firebase/Firestore</em> for real-time data storage and
+                    offline capabilities, and
                     <em>React Native Gifted Chat</em> for an intuitive chat
                     interface. The app also uses <em>React Navigation</em> for
                     screen transitions, <em>React Native Maps</em> for
@@ -86,31 +86,7 @@
               </div>
             </a>
           </div>
-          <div class="grid__item">
-            <a href="https://meet-puce-kappa.vercel.app/" target="_blank">
-              <img
-                src="MeetAppScreenshot.png"
-                alt="Screenshot of Meet App"
-                class="grid__item-img"
-              />
-              <div class="overlay">
-                <div class="grid__item-text">
-                  <h3>Lists App</h3>
-                  <p>
-                    This <em>React Native</em> and <em>Expo</em>-based mobile
-                    app manages shopping lists. Users can create, view, and
-                    manage their shopping lists with offline functionality
-                    (<em>AsyncStorage</em>) and automatic data syncing when
-                    online (<em>Firebase Firestore</em>). The app also utilizes
-                    <em>React Navigation</em> for smooth screen transitions and
-                    <em>@react-native-community/netinfo</em> to handle network
-                    connectivity status.
-                  </p>
-                  <p>This app was built in July, 2024.</p>
-                </div>
-              </div>
-            </a>
-          </div>
+
           <div class="grid__item">
             <a href="https://meet-puce-kappa.vercel.app/" target="_blank">
               <img
@@ -148,13 +124,14 @@
                   <h3>MyMovies App</h3>
                   <p>
                     This <em>React</em> app features a dynamic search
-                    functionality powered by <em>Fuse</em>, and it supports
-                    <em>CRUD</em> operations for managing user data through a
-                    self-built API. <em>React Bootstrap</em> and <em>SCSS</em> a
-                    user-friendly interface, while <em>Redux</em> manages state
-                    and <em>Parcel</em> handles bundling. The backend is built
-                    in MyMovies-Server Repo using <em>Node.js</em>,
-                    <em>Express</em>, and <em>MongoDB Atlas</em>.
+                    functionality powered by <em>Fuse</em>, and supports
+                    <em>CRUD operations</em> for managing user data through a
+                    <em>custom API</em>. <em>React Bootstrap</em> and
+                    <em>SCSS</em> ensure a beautiful and user-friendly
+                    interface, while <em>Parcel</em> handles bundling. The
+                    backend is built in MyMovies-Server Repo using
+                    <em>Node.js</em>, <em>Express</em>, and
+                    <em>MongoDB Atlas</em>.
                   </p>
                   <p>This app was built in April, 2024.</p>
                 </div>
@@ -162,25 +139,23 @@
             </a>
           </div>
           <div class="grid__item">
-            <a href="https://to-do-list-redux-app.netlify.app/" target="_blank">
+            <a href="https://meet-puce-kappa.vercel.app/" target="_blank">
               <img
-                src="ToDoAppScreenshot.png"
-                alt="Screenshot of Todo List App"
+                src="lists_app_screenshot.png"
+                alt="Screenshot of Lists App"
                 class="grid__item-img"
               />
               <div class="overlay">
                 <div class="grid__item-text">
-                  <h3>To Do List App</h3>
+                  <h3>Lists App</h3>
                   <p>
-                    This <em>ReactJS</em> app, rebuilt from a vanilla JavaScript
-                    todo-list-app, integrates <em>Redux</em> for robust state
-                    management. Key functionalities include adding, toggling,
-                    and deleting todo items, with support for keyboard input to
-                    swiftly add tasks. This app employs
-                    <em>Bootstrap-React</em> for a responsive user interface,
-                    and uses <em>Parcel</em> as a bundler.
+                    This <em>React Native</em> and <em>Expo</em>-based mobile
+                    app manages shopping lists. Users can create, view, and
+                    manage their shopping lists with offline functionality
+                    (<em>AsyncStorage</em>) and automatic data syncing when
+                    online (<em>Firebase Firestore</em>).
                   </p>
-                  <p>This app was built in May, 2024.</p>
+                  <p>This app was built in July, 2024.</p>
                 </div>
               </div>
             </a>
@@ -210,6 +185,30 @@
               </div>
             </a>
           </div>
+          <div class="grid__item">
+            <a href="https://to-do-list-redux-app.netlify.app/" target="_blank">
+              <img
+                src="ToDoAppScreenshot.png"
+                alt="Screenshot of Todo List App"
+                class="grid__item-img"
+              />
+              <div class="overlay">
+                <div class="grid__item-text">
+                  <h3>To Do List App</h3>
+                  <p>
+                    This <em>ReactJS</em> app, rebuilt from a vanilla JavaScript
+                    todo-list-app, integrates <em>Redux</em> for robust state
+                    management. Key functionalities include adding, toggling,
+                    and deleting todo items, with support for keyboard input to
+                    swiftly add tasks. This app employs
+                    <em>Bootstrap-React</em> for a responsive user interface,
+                    and uses <em>Parcel</em> as a bundler.
+                  </p>
+                  <p>This app was built in May, 2024.</p>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
       </section>
     </main>
@@ -222,7 +221,7 @@
           class="social-media__item"
         >
           <img
-            src="img\github-icon.svg"
+            src="img/icons8-github-100.png"
             alt="github icon"
             class="social-media__item"
           />
@@ -233,7 +232,7 @@
           class="social-media__item"
         >
           <img
-            src="img\instagram-icon.svg"
+            src="img/icons8-instagram-100.png"
             alt="instagram icon"
             class="social-media__item"
           />
@@ -244,7 +243,7 @@
           class="social-media__item"
         >
           <img
-            src="img\linkedin-icon.svg"
+            src="img/icons8-linkedin-100.png"
             alt="linkedin icon"
             class="social-media__item"
           />
