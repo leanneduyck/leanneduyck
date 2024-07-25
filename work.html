@@ -25,21 +25,15 @@
         alt="purple based logo of Leanne Duyck, text consisting of my name and title web dev"
         class="page-header__item-logo"
       />
-      <nav class="main-navigation page-header__item">
+      <nav>
         <ul role="menubar" class="navigation-list">
           <li role="presentation">
-            <a
-              href="index.html"
-              role="menuitem"
-              class="navigation-list__item navigation-list__item--active"
+            <a href="index.html" role="menuitem" class="navigation-list__item"
               >Home</a
             >
           </li>
           <li role="presentation">
-            <a
-              href="work.html"
-              role="menuitem"
-              class="navigation-list__item navigation-list__item--active"
+            <a href="work.html" role="menuitem" class="navigation-list__item"
               >Projects</a
             >
           </li>
@@ -58,7 +52,9 @@
     </header>
     <main>
       <section>
-        <h1 class="workpage__header">My Projects...</h1>
+        <h1 class="workpage__header">My Projects</h1>
+        <h3>click on any project to experience the app</h3>
+        <!-- grid for projects and links -->
         <div class="grid">
           <div class="grid__item">
             <a
@@ -74,69 +70,14 @@
                 <div class="grid__item-text">
                   <h3 class="about-name">Chat App</h3>
                   <p>
-                    This <em>React Native</em> mobile app uses
-                    <em>Firebase/Firestore</em> for real-time data storage and
-                    offline capabilities, and
-                    <em>React Native Gifted Chat</em> for an intuitive chat
-                    interface. The app also uses <em>React Navigation</em> for
-                    screen transitions, <em>React Native Maps</em> for
-                    geolocation, <em>AsyncStorage</em> for local data storage,
-                    and <em>Expo</em> for development and testing in Android and
-                    iOS.
+                    This <em>React Native</em> mobile app enables users to
+                    customize their chat experience by choosing a name and
+                    background color, then facilitates real-time messaging,
+                    image sharing, and location sharing. Integrated with
+                    <em>Firebase/Firestore</em> for data storage, this app
+                    provides users with both offline and online functionality.
                   </p>
                   <p>This app was built in July, 2024.</p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="grid__item">
-            <a href="https://meet-puce-kappa.vercel.app/" target="_blank">
-              <img
-                src="img/MeetAppScreenshot.png"
-                alt="Screenshot of Meet App"
-                class="grid__item-img"
-              />
-              <div class="overlay">
-                <div class="grid__item-text">
-                  <h3 class="about-name">Meet App</h3>
-                  <p>
-                    The Meet App is an event management tool built using
-                    <em>React</em> and deployed as a <em>PWA</em>. It integrates
-                    <em>Google Calendar API</em> for real-time event data
-                    retrieval, <em>AWS Lambda</em> for serverless processing,
-                    and secure user authentication via
-                    <em>Google OAuth 2.0</em>. <em>Recharts</em> provides users
-                    with dynamic data visualization. Testing is facilitated by
-                    <em>Puppeteer</em> and <em>Jest</em>.
-                  </p>
-                  <p>This app was built in June, 2024.</p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="grid__item">
-            <a href="https://main--react-mymovies.netlify.app/" target="_blank">
-              <img
-                src="img/MyMovies-Client-Screenshot2.png"
-                alt="Screenshot of MyMovies App"
-                class="grid__item-img"
-              />
-              <div class="overlay">
-                <div class="grid__item-text">
-                  <h3 class="about-name">MyMovies App</h3>
-                  <p>
-                    This <em>React</em> app features a dynamic search
-                    functionality powered by <em>Fuse</em>, and supports
-                    <em>CRUD operations</em> for managing user data through a
-                    <em>custom API</em>. <em>React Bootstrap</em> and
-                    <em>SCSS</em> ensure a beautiful and user-friendly
-                    interface, while <em>Parcel</em> handles bundling. The
-                    backend is built in MyMovies-Server Repo using
-                    <em>Node.js</em>, <em>Express</em>, and
-                    <em>MongoDB Atlas</em>.
-                  </p>
-                  <p>This app was built in April, 2024.</p>
                 </div>
               </div>
             </a>
@@ -155,11 +96,13 @@
                 <div class="grid__item-text">
                   <h3 class="about-name">Lists App</h3>
                   <p>
-                    This <em>React Native</em> and <em>Expo</em>-based mobile
-                    app manages shopping lists. Users can create, view, and
-                    manage their shopping lists with offline functionality
-                    (<em>AsyncStorage</em>) and automatic data syncing when
-                    online (<em>Firebase Firestore</em>).
+                    This <em>React Native</em> and <em>ExpoGo</em>-based mobile
+                    app manages lists. Users can create, update, and view their
+                    lists. It supports offline functionality
+                    (<em>AsyncStorage</em>) for a better user experience.
+                    <em>Firebase Firestore</em> is used for backend services,
+                    providing real-time data synchronization and offline data
+                    persistence.
                   </p>
                   <p>This app was built in July, 2024.</p>
                 </div>
@@ -167,26 +110,26 @@
             </a>
           </div>
           <div class="grid__item">
-            <a href="https://planting-by-zones.vercel.app/" target="_blank">
+            <a href="https://meet-puce-kappa.vercel.app/" target="_blank">
               <img
-                src="img/PlantingByZonesScreenshot.png"
-                alt="Planting by Zones App"
+                src="img/MeetAppScreenshot.png"
+                alt="Screenshot of Meet App"
                 class="grid__item-img"
               />
               <div class="overlay">
                 <div class="grid__item-text">
-                  <h3 class="about-name">Planting by Zones App</h3>
+                  <h3 class="about-name">Meet App</h3>
                   <p>
-                    The Planting by Zones app allows users to discover their
-                    local hardiness zone and access a tailored planting calendar
-                    by simply entering a zipcode. Using <em>HTML</em> for
-                    structure and <em>JavaScript</em> for frontend
-                    functionality, the app integrates a
-                    <em>third-party API</em> to fetch and display zone-specific
-                    information. The responsive UI is built with
-                    <em>CSS</em> and <em>Bootstrap</em>.
+                    This <em>React PWA</em> is an event management tool, built
+                    using <em>TDD</em>. It integrates
+                    <em>Google Calendar API</em>
+                    with <em>serverless functions</em> for real-time event
+                    updates, and authenticates users via
+                    <em>Google OAuth 2.0</em>. Users can search for events,
+                    customize search criteria, visualize event data with dynamic
+                    charts, and access key features offline.
                   </p>
-                  <p>This app was built in March, 2024.</p>
+                  <p>This app was built in June, 2024.</p>
                 </div>
               </div>
             </a>
@@ -202,18 +145,135 @@
                 <div class="grid__item-text">
                   <h3 class="about-name">To Do List App</h3>
                   <p>
-                    This <em>ReactJS</em> app, rebuilt from a vanilla JavaScript
-                    todo-list-app, integrates <em>Redux</em> for robust state
-                    management. Key functionalities include adding, toggling,
-                    and deleting todo items, with support for keyboard input to
-                    swiftly add tasks. This app employs
-                    <em>Bootstrap-React</em> for a responsive user interface,
-                    and uses <em>Parcel</em> as a bundler.
+                    This <em>ReactJS</em>app was originally a vanilla JavaScript
+                    todo-list-app, but now utilizes <em>Redux</em> for efficient
+                    state management. Users can add, toggle, and delete todo
+                    items via a responsive interface powered by
+                    <em>Bootstrap-React</em>.
                   </p>
                   <p>This app was built in May, 2024.</p>
                 </div>
               </div>
             </a>
+          </div>
+          <div class="grid__item">
+            <a href="https://main--react-mymovies.netlify.app/" target="_blank">
+              <img
+                src="img/MyMovies-Client-Screenshot2.png"
+                alt="Screenshot of MyMovies App"
+                class="grid__item-img"
+              />
+              <div class="overlay">
+                <div class="grid__item-text">
+                  <h3 class="about-name">MyMovies App</h3>
+                  <p>
+                    This is a full-stack <em>MERN</em> app where users can
+                    securely sign up or log in to manage and interact with movie
+                    data. Authenticated users can view, edit, and delete movies
+                    from a favorites list, as well as manage profile details.
+                    The frontend is built with <em>React</em>, uses
+                    <em>Fuse</em> for dynamic search functionality, and
+                    integrates a <em>custom-built API</em>.
+                  </p>
+                  <p>This app was built in April, 2024.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid__item">
+            <a href="https://planting-by-zones.vercel.app/" target="_blank">
+              <img
+                src="img/PlantingByZonesScreenshot.png"
+                alt="Planting by Zones App"
+                class="grid__item-img"
+              />
+              <div class="overlay">
+                <div class="grid__item-text">
+                  <h3 class="about-name">Planting by Zones App</h3>
+                  <p>
+                    This <em>JavaScript</em> app simplifies gardening. Users
+                    input a zipcode and a <em>third-party API</em> fetches and
+                    displays detailed information about the user's hardiness
+                    zone. Users can also access links to additional information
+                    about their plants. All is built with user-friendly UI via
+                    <em>Bootstrap</em>.
+                  </p>
+                  <p>This app was built in March, 2024.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <h3>
+          click on any case study to take a closer look at my journey into
+          coding as well as my build process
+        </h3>
+        <!-- grid for case studies -->
+        <div class="grid">
+          <div class="grid__item">
+            <a
+              href="#"
+              class="open-modal"
+              data-modal="modal1"
+              data-img="img/chatApp_caseStudy.pdf"
+            >
+              <img
+                src="img/chatApp_caseStudy.png"
+                alt="chatApp Case Study"
+                class="grid__item-img"
+              />
+              <div class="overlay">
+                <div class="grid__item-text">
+                  <h3 class="about-name">Chat App: a case study</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid__item">
+            <a
+              href="#"
+              class="open-modal"
+              data-modal="modal2"
+              data-img="img/meetApp_case_study.pdf"
+            >
+              <img
+                src="img/meetApp_case_study.png"
+                alt="MeetApp Case Study"
+                class="grid__item-img"
+              />
+              <div class="overlay">
+                <div class="grid__item-text">
+                  <h3 class="about-name">Meet App: a case study</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Modal structure -->
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <div class="close">&times;</div>
+            <iframe
+              src="img/chatApp_caseStudy.pdf"
+              alt="chat app case study"
+              class="modal-img"
+              width="100%"
+              height="600px"
+            ></iframe>
+          </div>
+        </div>
+
+        <div id="modal2" class="modal">
+          <div class="modal-content">
+            <div class="close">&times;</div>
+            <iframe
+              src="img/meetApp_caseStudy.pdf"
+              alt="meet app case study"
+              class="modal-img"
+              width="100%"
+              height="600px"
+            ></iframe>
           </div>
         </div>
       </section>
@@ -232,17 +292,11 @@
             class="social-media__item"
           />
         </a>
-        <a
-          href="https://instagram.com/leanne_duyck/"
-          target="_blank"
-          class="social-media__item"
-        >
-          <img
-            src="img/icons8-instagram-100.png"
-            alt="instagram icon"
-            class="social-media__item"
-          />
-        </a>
+        <img
+          src="img\favicon.svg"
+          alt="plumtree image"
+          class="footer__plumtree-favicon"
+        />
         <a
           href="https://linkedin.com/in/leanne-duyck-14b8702ab/"
           target="_blank"
@@ -257,13 +311,38 @@
       </div>
       <div>designed and developed by:</div>
       <div>Leanne Duyck</div>
-      <div>
-        <img
-          src="img\favicon.svg"
-          alt="plumtree image"
-          class="footer__plumtree-favicon"
-        />
-      </div>
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const openModalBtns = document.querySelectorAll(".open-modal");
+
+        // open modal
+        openModalBtns.forEach((button) => {
+          button.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default anchor behavior
+            const modalId = this.getAttribute("data-modal");
+            const imgSrc = this.getAttribute("data-img");
+            const modal = document.getElementById(modalId);
+            const modalImg = modal.querySelector(".modal-img"); // Select image within the modal
+            modal.style.display = "block";
+            modalImg.src = imgSrc; // Set the image source dynamically
+          });
+        });
+
+        // close modal when clicking on the close button
+        document.querySelectorAll(".close").forEach((button) => {
+          button.addEventListener("click", function () {
+            this.closest(".modal").style.display = "none";
+          });
+        });
+
+        // close modal when clicking outside of the modal content
+        window.addEventListener("click", function (event) {
+          if (event.target.classList.contains("modal")) {
+            event.target.style.display = "none";
+          }
+        });
+      });
+    </script>
   </body>
 </html>
