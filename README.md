@@ -9,7 +9,7 @@ Key Features:
 4. Navigation: Includes intuitive navigation to easily explore different sections of the portfolio, ensuring a smooth user experience.
 5. Custom Styling: Custom CSS ensures a unique and professional appearance that reflects your personal brand and style.
 
-Website: https://leanneduyck.vercel.app/ OR https://leanneduyck.github.io
+Website: https://leanneduyck.vercel.app/ 
 
 Technologies Used:
 
