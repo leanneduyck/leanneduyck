@@ -26,6 +26,7 @@ darkest purple #713178
   --opacity: 0.8;
   --border_radius: 3px;
   --padding: 20px;
+  --box-shadow: 2px 2px 12px rgba(255, 255, 255, 0.4);
 }
 
 /*font used: Montserrat reg 400*/
@@ -68,6 +69,7 @@ body {
 .page-header__item-logo {
   height: 110px;
   animation-iteration-count: 1;
+  box-shadow: var(--box-shadow);
 }
 
 /*
@@ -133,6 +135,7 @@ h1 {
   max-width: 200px;
   margin-right: 40px;
   border-radius: 50%;
+  box-shadow: var(--box-shadow);
 }
 
 .profile__description {
@@ -206,10 +209,17 @@ h1 {
 * work pg styling
 */
 
-.workpage__header {
+/* .workpage__header {
   display: flex;
   justify-content: center;
   font-size: 35px;
+} */
+
+.project-page {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 35px;
 }
 
 h3 {
@@ -228,6 +238,7 @@ h3 {
 
 .grid__item {
   position: relative;
+  box-shadow: var(--box-shadow);
 }
 
 .grid__item-img {
@@ -268,10 +279,17 @@ h3 {
 *about page stylings 
 */
 
-.about-page {
+/* .about-page {
   text-align: center;
   margin: 0;
   padding: 0;
+} */
+
+.about-page {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 35px;
 }
 
 .about-name {
@@ -280,8 +298,8 @@ h3 {
 
 .grid__about {
   display: grid;
-  /* grid-template-columns: 1fr 1fr; */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: 1fr 1fr; /* actually works on lg screens */
+  /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
   margin: 0 35px;
   margin-bottom: 35px;
   grid-gap: 20px;
@@ -290,12 +308,14 @@ h3 {
 .grid-item__about {
   position: relative;
   border-radius: var(--border_radius);
+  box-shadow: var(--box-shadow);
 }
 
 .grid-item__about-img {
   display: block;
   max-width: 100%;
   height: 100%;
+  border-radius: var(--border_radius);
 }
 
 .span-name {
@@ -310,7 +330,7 @@ h3 {
   text-decoration: none;
   padding: var(--padding);
   margin: 10px;
-  border-radius: 5px;
+  border-radius: var(--border_radius);
 }
 
 .item1,
@@ -326,7 +346,7 @@ h3 {
   text-decoration: none;
   padding: var(--padding);
   margin: 10px;
-  border-radius: 5px;
+  border-radius: var(--border_radius);
 }
 
 .scrolling_techs {
@@ -530,7 +550,8 @@ h3 {
     margin: 10px;
   }
   .grid__about {
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr; */ /* isn't working */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 10px;
     margin: 10px;
   }
@@ -539,36 +560,63 @@ h3 {
   }
   body {
     font-size: 0.8rem;
+    padding-top: 0;
   }
-  h2 {
+  h1 {
     font-size: 1rem;
   }
-  .navigation-list,
-  h3 {
-    font-size: 0.9rem;
-    text-align: center;
+  h2 {
+    font-size: 0.8rem;
   }
-  .page-footer {
+  h3 {
     font-size: 0.7rem;
   }
+  .page-header {
+    align-items: flex-end; /* aligns all items to bottom */
+    margin-top: 0; /* removes space above */
+    padding-top: 0; /* removes space above */
+  }
+  .page-header__item-logo {
+    display: inline-block;
+    height: 65px;
+  }
+  .navigation-list {
+    display: inline-block;
+    width: calc(100% - 75px); /* makes it inline with logo */
+    column-count: 2;
+    column-gap: 20px;
+    padding: 0; /* removes space around */
+    margin: 0; /* removes space around */
+  }
+  .navigation-list,
+  .page-footer {
+    font-size: 0.6rem;
+  }
   .descriptor-item {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+  }
+  .about-name {
+    font-size: 0.7rem;
+  }
+  .grid__item-text {
+    font-size: 0.4rem;
+  }
+  .project-page,
+  .about-page,
+  .contact-form {
+    margin: 10px;
+    text-align: center;
   }
 }
-.project-page,
-.about-page,
-.contact-form {
-  margin: 10px;
-  text-align: center;
-}
-@media (max-width: 750px) {
+@media (min-width: 501px) and (max-width: 1000px) {
   .grid {
     grid-template-columns: 1fr;
     grid-gap: 10px;
     margin: 10px;
   }
   .grid__about {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* grid-template-columns: 1fr; */ /* isn't working */
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     grid-gap: 10px;
     margin: 10px;
   }
@@ -578,23 +626,35 @@ h3 {
   body {
     font-size: 1rem;
   }
-  h2 {
+  h1 {
     font-size: 1.3rem;
   }
-  .navigation-list,
-  h3 {
-    font-size: 1.2rem;
+  h2 {
+    font-size: 1.1rem;
   }
+  h3 {
+    font-size: 1rem;
+  }
+  .page-header__item-logo {
+    height: 80px;
+  }
+  .navigation-list,
   .page-footer {
     font-size: 0.8rem;
   }
   .descriptor-item {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .project-page,
   .about-page,
   .contact-form {
     margin: 10px;
     text-align: center;
+  }
+  .about-name {
+    font-size: 1rem;
+  }
+  .grid__item-text {
+    font-size: 0.9rem;
   }
 }
