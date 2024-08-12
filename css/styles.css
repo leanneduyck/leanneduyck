@@ -108,6 +108,10 @@ body {
   transition-duration: var(--transition-duration);
 }
 
+.navigation-list__item.active:before {
+  height: 100%; /* makes the underline appear */
+}
+
 .navigation-list__item:hover:before {
   height: 100%; /* makes the underline appear */
   transition-duration: var(--transition-duration);
@@ -268,7 +272,7 @@ h3 {
 .grid__item-text {
   background-color: var(--light_purple) 0.5;
   color: var(--darkest_purple);
-  font-size: 12px;
+  font-size: 0.7rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -509,6 +513,7 @@ h3 {
 
 .social-media {
   padding: 5px;
+  margin-bottom: 15px;
   list-style: none;
   display: flex;
   justify-content: center;
@@ -517,8 +522,11 @@ h3 {
 .social-media__item {
   position: relative;
   text-decoration: none;
+  margin-right: 5px;
+  margin-left: 5px;
   padding: 5px;
-  width: 60px;
+  width: 50px;
+  height: auto;
   cursor: pointer;
   color: var(--lightest_orange);
   transition-duration: var(--transition-duration);
@@ -671,5 +679,11 @@ h3 {
   }
   .grid__item-text {
     font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1001px) and (max-width: 1500px) {
+  .grid__item-text {
+    font-size: 0.6rem;
   }
 }
