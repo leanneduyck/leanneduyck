@@ -284,7 +284,8 @@ h1 {
 /* adding -webkit */
 .project-page,
 .about-page,
-.contact-form {
+.contact-form,
+.documentation-page {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -331,10 +332,25 @@ h3 {
   -webkit-box-shadow: var(--box-shadow);
 }
 
+.doc-grid {
+  box-shadow: var(--box-shadow);
+  -webkit-box-shadow: var(--box-shadow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
 .grid__item-img {
   display: block;
   width: 100%;
   height: 100%;
+}
+
+.doc-img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .overlay {
@@ -353,6 +369,10 @@ h3 {
 .grid__item:hover .overlay {
   height: 100%; /* makes the overlay appear */
   opacity: var(--opacity);
+}
+
+.aws-hover:hover .overlay {
+  opacity: 0.9;
 }
 
 .grid__item-text {
@@ -385,6 +405,12 @@ h3 {
 
 .about-name {
   color: var(--dark_orange);
+}
+
+.about-me-section {
+  text-align: center;
+  margin: 0 100px;
+  padding: 50px;
 }
 
 .grid__about {

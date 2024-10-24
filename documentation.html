@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="reset" type="reset" href="css\reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <title>LD: Projects</title>
+    <link
+      rel="shortcut icon"
+      href="img\favicon.svg"
+      alt="black and white etched plumtree favicon"
+    />
+  </head>
+  <body>
+    <header class="page-header">
+      <img
+        src="img\leanne-duyck-logo.gif"
+        alt="purple based logo of Leanne Duyck, text consisting of my name and title web dev"
+        class="page-header__item-logo"
+      />
+      <nav>
+        <ul role="menubar" class="navigation-list">
+          <li role="presentation">
+            <a href="index.html" role="menuitem" class="navigation-list__item"
+              >Home</a
+            >
+          </li>
+          <li role="presentation">
+            <a href="work.html" role="menuitem" class="navigation-list__item"
+              >Projects</a
+            >
+          </li>
+          <li role="presentation">
+            <a
+              href="documentation.html"
+              role="menuitem"
+              class="navigation-list__item active"
+              >Documentation</a
+            >
+          </li>
+          <li role="presentation">
+            <a href="about.html" role="menuitem" class="navigation-list__item"
+              >About</a
+            >
+          </li>
+          <li role="presentation">
+            <a href="contact.html" role="menuitem" class="navigation-list__item"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="documentation-page">
+      <h1>Documentation</h1>
+      <div>
+        <h3>
+          "Making the world a clearer place." -
+          <em>Google Tech Writing I</em>
+        </h3>
+        <!-- <h3>
+          "The simplest solution is usually the right one." -
+          <em>Occam's Razor</em>
+        </h3> -->
+        <!-- <h3>
+          "No documentation is better than bad documentation." -
+          <em>Joel Spolsky</em>
+        </h3> -->
+        <!-- grid for documentation examples, links to GitHub repos -->
+        <div class="grid">
+          <!-- modal for AWS since no GitHub repo link -->
+          <div class="grid__item doc-grid aws-hover">
+            <a
+              href="#"
+              class="open-modal"
+              data-modal="modal1"
+              data-img="img/docImg/AWS Documentation_ VPC, EC2, S3, ALB, ASG.pdf"
+            >
+              <img
+                src="img/docImg/AWS-Documentation.png"
+                alt="AWS Documentation"
+                class="doc-img"
+              />
+              <div class="overlay">
+                <div class="grid__item-text">
+                  <h3 class="about-name">AWS Documentation</h3>
+                  <p>
+                    This documentation outlines the
+                    <em>step-by-step process</em> for setting up a
+                    <em>scalable AWS infrastructure</em> to host a web
+                    application. It provides <em>clear guidance</em> on
+                    configuring a <em>custom VPC</em>, creating
+                    <em>secure EC2 instances</em> for the API and Node.js
+                    deployment, and setting up a bastion host for secure access.
+                    Additionally, the documentation explains how to use
+                    <em>S3</em> for static website hosting, as well as how to
+                    implement <em>Auto Scaling Groups (ASG)</em> and an
+                    <em>Application Load Balancer (ALB)</em> to ensure traffic
+                    distribution and scalability. This detailed approach
+                    <em
+                      >makes AWS infrastructure setup accessible for both
+                      technical and non-technical users</em
+                    >.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- normal grid items with repo linksx -->
+          <div class="grid__item doc-grid">
+            <a
+              href="https://github.com/leanneduyck/MyMovies-Server.git"
+              target="_blank"
+            >
+              <img
+                src="img/docImg/myMovies-API.png"
+                alt="Screenshot of myMovies API"
+                class="doc-img"
+              />
+              <div class="overlay">
+                <div class="grid__item-text">
+                  <h3 class="about-name">Custom-Built API Documentation</h3>
+                  <p>
+                    This documentation presents a
+                    <em>custom-built RESTful API</em> that supports
+                    unauthenticated and authenticated users, facilitates JWT
+                    authentication, and performs a range of CRUD operations. It
+                    offers
+                    <em
+                      >clear setup instructions for local and AWS deployment</em
+                    >, along with detailed information on key features.
+                    Throughout the codebase,
+                    <em>JSDoc-compliant comments</em> enhance clarity and
+                    consistency, providing insights into the API's
+                    functionality, parameters, and return values. This approach
+                    <em
+                      >improves developer onboarding and ongoing maintenance</em
+                    >. Overall, the documentation simplifies the creation and
+                    use of a RESTful API into
+                    <em>accessible and actionable content</em>, ensuring
+                    comprehension for both
+                    <em>technical and non-technical audiences</em>.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid__item doc-grid">
+            <a
+              href="https://github.com/leanneduyck/myMovies-Angular.git"
+              target="_blank"
+            >
+              <img
+                src="img/docImg/typeDoc.png"
+                alt="Screenshot of myMovies-Angular API in TypeDoc"
+                class="doc-img"
+              />
+              <div class="overlay">
+                <div class="grid__item-text">
+                  <h3 class="about-name">API Documentation in TypeDoc</h3>
+                  <p>
+                    This documentation effectively breaks down the process of
+                    building a <em>RESTful API</em> and its client-side
+                    application into <em>clear, manageable steps</em>. It
+                    emphasizes the <em>integration of the API</em> within the
+                    single-page application (SPA), clearly outlining key
+                    features and functionalities. Throughout the codebase,
+                    <em>TypeDoc-compliant comments</em> are utilized to
+                    <em>enhance clarity</em> and
+                    <em>streamline documentation</em>. This approach, combined
+                    with <em>comprehensive setup instructions</em>, enables
+                    developers to quickly grasp the essentials when using or
+                    recreating this app. Overall, this documentation serves as a
+                    <em>well-structured resource</em> for both
+                    <em>technical and non-technical audiences</em>, making the
+                    development and usage of this RESTful API
+                    <em>accessible and straightforward</em>.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid__item doc-grid">
+            <a href="https://github.com/leanneduyck/Meet.git" target="_blank">
+              <img
+                src="img/docImg/meetApp-userStory-testing.png"
+                alt="Screenshot of Meet App user story testing"
+                class="doc-img"
+              />
+              <div class="overlay">
+                <div class="grid__item-text">
+                  <h3 class="about-name">End-to-End Testing Documentation</h3>
+                  <p>
+                    In a <em>user-centered, test-driven</em> approach, this
+                    README was crafted with <em>user stories</em> and
+                    <em>test-acceptance criteria</em> at its core. It
+                    <em>simplifies</em> the <em>development life cycle</em> of
+                    the app into <em>clear, manageable steps</em> — including
+                    integrating third-party services like Google Calendar API
+                    and AWS Lambda. The
+                    <em>instructions are concise and actionable</em>, making
+                    <em
+                      >complex technologies accessible to both developers and
+                      non-technical audiences</em
+                    >
+                    by
+                    <em
+                      >distilling intricate development processes into clear,
+                      structured content</em
+                    >.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="grid__item doc-grid">
+            <a href="https://github.com/leanneduyck/chat.git" target="_blank">
+              <img
+                src="img/docImg/chatApp-readMe.png"
+                alt="Screenshot of Chat App README"
+                class="doc-img"
+              />
+              <div class="overlay">
+                <div class="grid__item-text">
+                  <h3 class="about-name">README Documentation</h3>
+                  <p>
+                    Beginning with <em>user-stories</em>, this documentation
+                    provides a <em>complete step-by-step</em> guide for a React
+                    Native app. These instructions break down
+                    <em>complex tasks into easy-to-follow instructions</em> that
+                    cover all aspects of the development process, including
+                    libraries and emulators. The <em>clear structure</em> helps
+                    devlopers to
+                    <em
+                      >easily navigate through the setup and development
+                      process</em
+                    >, making this documentation <em>accessible</em> and
+                    <em>straightforward</em> for users with varying levels of
+                    technical experience.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Modal structure -->
+
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <div class="close">&times;</div>
+            <iframe
+              src="img/docImg/AWS Documentation_ VPC, EC2, S3, ALB, ASG.pdf"
+              alt="AWS Documentation"
+              class="modal-img"
+              width="100%"
+              height="600px"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      find me on:
+      <div class="social-media">
+        <a
+          href="https://github.com/leanneduyck"
+          target="_blank"
+          class="social-media__item"
+        >
+          <img src="img/git.png" alt="github icon" class="social-media__item" />
+        </a>
+        <a
+          href="https://stackoverflow.com/users/24062305/leanne-duyck"
+          target="_blank"
+          class="social-media__item"
+        >
+          <img
+            src="img/stackoverflow_icon.png"
+            alt="stackoverflow icon"
+            class="social-media__item"
+          />
+        </a>
+        <img
+          src="img\favicon.svg"
+          alt="plumtree image"
+          class="footer__plumtree-favicon"
+        />
+        <a
+          href="https://medium.com/@leanne.m.dk"
+          target="_blank"
+          class="social-media__item"
+        >
+          <img
+            src="img/medium_icon.png"
+            alt="medium icon"
+            class="social-media__item"
+          />
+        </a>
+        <a
+          href="https://linkedin.com/in/leanneduyck/"
+          target="_blank"
+          class="social-media__item"
+        >
+          <img
+            src="img/104493_linkedin_icon.png"
+            alt="linkedin icon"
+            class="social-media__item"
+          />
+        </a>
+      </div>
+      <div>designed and developed by:</div>
+      <div>Leanne Duyck</div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const openModalBtns = document.querySelectorAll(".open-modal");
+
+        // open modal
+        document.querySelectorAll(".open-modal").forEach((item) => {
+          item.addEventListener("click", (event) => {
+            event.preventDefault(); // Prevents default anchor behavior
+            const modalId = event.target
+              .closest("a")
+              .getAttribute("data-modal");
+            document.getElementById(modalId).style.display = "block";
+          });
+        });
+
+        document.querySelectorAll(".close").forEach((item) => {
+          item.addEventListener("click", (event) => {
+            const modal = event.target.closest(".modal");
+            modal.style.display = "none";
+          });
+        });
+
+        // close modal when clicking outside of the modal content
+        window.addEventListener("click", function (event) {
+          if (event.target.classList.contains("modal")) {
+            event.target.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
