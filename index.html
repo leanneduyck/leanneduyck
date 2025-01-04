@@ -1,3 +1,530 @@
+<!-- original code for frontend dev portfolio commented out below -->
+<!-- active code is for wordpress specialist/designer portfolio -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="reset" type="reset" href="css\reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <title>Leanne Duyck</title>
+    <link
+      rel="shortcut icon"
+      href="img\favicon.svg"
+      alt="black and white etched plumtree favicon"
+    />
+  </head>
+  <body>
+    <header class="page-header">
+      <nav>
+        <ul role="menubar" class="navigation-list">
+          <li role="presentation">
+            <a href="#home" role="menuitem" class="navigation-list__item active"
+              >Home</a
+            >
+          </li>
+          <li role="presentation">
+            <a href="#projects" role="menuitem" class="navigation-list__item"
+              >Projects</a
+            >
+          </li>
+          <li role="presentation">
+            <a href="#about" role="menuitem" class="navigation-list__item"
+              >About</a
+            >
+          </li>
+          <li role="presentation">
+            <a href="#contact" role="menuitem" class="navigation-list__item"
+              >Contact</a
+            >
+          </li>
+          <li role="presentation">
+            <img
+              src="img\favicon.svg"
+              alt="black and white etched plumtree favicon"
+              class="page-header__item-logo"
+            />
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- home section -->
+      <section id="home" class="section fade-in">
+        <br />
+        <br />
+        <div class="profile">
+          <img
+            src="img\portrait-pic.jpg"
+            class="profile__portrait"
+            alt="LD Portrait"
+          />
+          <div class="profile__description">
+            <h1>hello world. . .</h1>
+            <ul class="descriptor-list">
+              <li class="descriptor-item">
+                I am <span class="span-name">Leanne Duyck</span>
+              </li>
+              <li class="descriptor-item">
+                <em>Web Designer and Developer</em>
+              </li>
+              <li class="descriptor-item">
+                <em>WordPress Specialist</em>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- projects section -->
+      <section id="projects" class="section fade-in">
+        <div class="project-page">
+          <h1>some of my projects. . .</h1>
+          <br />
+          <div class="grid">
+            <div class="grid__item descriptor-item">
+              <a
+                href="https://widowsofprayer.wpenginepowered.com/"
+                target="_blank"
+              >
+                <img
+                  src="img/widows-of-prayer.png"
+                  alt="Screenshot of Widows of Prayer"
+                  class="grid__item-img"
+                />
+                <div class="overlay">
+                  <div class="grid__item-text">
+                    <img src="img/widows-of-prayer-2.png" />
+                  </div>
+                  <div class="grid__item-text">
+                    <img src="img/widows-of-prayer-case-study.png" />
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="grid__item descriptor-item">
+              <a
+                href="https://my-movies-angular.vercel.app/welcome"
+                target="_blank"
+              >
+                <img
+                  src="img/myMovies-Angular-cleaner.png"
+                  alt="Screenshot of myMovies-Angular"
+                  class="grid__item-img"
+                />
+                <div class="overlay">
+                  <div class="grid__item-text">
+                    <img src="img/MyMovies-Client-Screenshot2.png" />
+                  </div>
+                  <div class="grid__item-text">
+                    <img src="img/myMovies-case-study-2.png" />
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="grid__item descriptor-item">
+              <a
+                href="https://expo.dev/preview/update?message=readme&updateRuntimeVersion=1.0.0&createdAt=2024-07-14T00%3A52%3A16.822Z&slug=exp&projectId=06dc17ba-4509-4950-90c4-203dcae4ee64&group=a0360ea5-cb19-48a2-9c71-07b2523ac535"
+                target="_blank"
+              >
+                <img
+                  src="img/chat-app-vertical.png"
+                  alt="Screenshot of Chat App"
+                  class="grid__item-img"
+                />
+                <div class="overlay">
+                  <div class="grid__item-text">
+                    <img src="img/chat-app-vertical-2.png" />
+                  </div>
+                  <div class="grid__item-text">
+                    <img src="img/chat-app-case-study-2.png" />
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="grid__item descriptor-item">
+              <a href="#" target="_blank">
+                <div class="overlay">
+                  <div class="grid__item-text">
+                    <h3 class="grid__item-img">
+                      more WordPress creations are coming. . .
+                    </h3>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="CTA" class="section fade-in">
+        <div>
+          <h3>
+            <a href="#contact" class="contact-form navigation-list__item">
+              <em class="cta-text">
+                <span class="span-name">&lt;</span>
+                let's build something beautiful together
+                <span class="span-name">/&gt;</span>
+              </em>
+            </a>
+          </h3>
+        </div>
+      </section>
+
+      <!-- testimonials section -->
+      <!-- <section id="testimonials" class="section fade-in">
+        <div class="project-page">
+          <h1>what people are saying. . .</h1>
+          <div class="grid-item__about item3">
+        <div class="scrolling_techs">
+          <span>
+            Leanne is awesome
+          </span> -->
+      <!-- duplicate to create seamless loop -->
+      <!-- <span>
+            Leanne is awesome
+          </span>
+        </div>
+      </div>
+        </div>
+      </section> -->
+      <!-- about section -->
+      <section id="about" class="section fade-in">
+        <div class="about-page about-me-section">
+          <h1>a bit about me. . .</h1>
+          <div>
+            <p>
+              As a music educator turned
+              <span class="span-name"><em>WordPress Web Designer</em></span
+              >, I use <span class="span-name">structured creativity</span> when
+              building intuitive, user-friendly websites. My experience in
+              teaching has shaped my skills in
+              <span class="span-name">communication</span> and
+              <span class="span-name">content organization</span>, enabling me
+              to design digital spaces that are both engaging and easy to
+              navigate. <br />
+              <br />
+              I am passionate about crafting
+              <span class="span-name">responsive web designs</span>
+              that adapt seamlessly across devices. Comfortable in
+              <span class="span-name"><em>HTML, CSS, Javascript,</em></span> and
+              <span class="span-name"><em>WordPress</em></span
+              >, I specialize in creating websites that don't just look good -
+              they work effortlessly for diverse users. <br />
+              <br />
+              Armed with a B.A. in
+              <span class="span-name">Music Education</span> from Seattle
+              Pacific University, a
+              <span class="span-name">Full-Stack Web Development</span>
+              certificate from CareerFoundry, <br />
+              and a deep enthusiasm for all things
+              <span class="span-name"><em>WordPress</em></span
+              >, I am excited to collaborate on projects that blend creativity
+              with strategy!
+              <br />
+              <br />
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- contact section -->
+      <section id="contact" class="section fade-in">
+        <div class="contact-form">
+          <h1>let's connect. . .</h1>
+          <div>
+            <p>
+              email me
+              <a
+                class="navigation-list__item"
+                href="mailto:leanne.m.dk@gmail.com"
+                target="_blank"
+                >here</a
+              >
+            </p>
+            <p>
+              message me on
+              <a
+                href="https://linkedin.com/in/leanne-duyck-14b8702ab/"
+                target="_blank"
+                class="navigation-list__item"
+                >LinkedIn
+              </a>
+            </p>
+            <p>
+              follow me on
+              <a
+                href="https://github.com/leanneduyck"
+                target="_blank"
+                class="navigation-list__item"
+                >GitHub
+              </a>
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- scrolling techs -->
+      <div class="grid-item__about item3 section fade-in">
+        <div class="scrolling_techs">
+          <span>
+            <img src="img/vscode.png" alt="vsc" height="90px" />
+          </span>
+          <span
+            ><img src="img/terminal.png" alt="Terminal" height="100px"
+          /></span>
+          <span><img src="img/git.png" alt="GitHub" height="100px" /></span>
+          <span><img src="img/github.png" alt="Git" height="100px" /></span>
+          <span>
+            <span><img src="img/aws.png" alt="aws" height="100px" /></span>
+            <span
+              ><img
+                src="img/firebase_blackText.png"
+                alt="Firebase"
+                height="80px"
+            /></span>
+            <span><img src="img/react.png" alt="React" height="100px" /></span>
+            <span
+              ><img src="img/bootstrap.png" alt="Bootstrap" height="100px" />
+              <span>
+                <img
+                  src="img/8666252_elementor_icon.png"
+                  alt="Elementor"
+                  height="100px"
+                />
+              </span>
+              <img
+                src="img/4375134_logo_yoast_icon.png"
+                alt="Yoast"
+                height="100px"
+              />
+            </span>
+          </span>
+          <img
+            src="img/334823_wordpress_press_social media_word_icon.png"
+            alt="WordPress"
+            height="100px"
+          />
+          <span>
+            <span><img src="img/html.png" alt="HTML" height="100px" /></span>
+            <span><img src="img/css.svg" alt="CSS" height="100px" /></span>
+            <span
+              ><img src="img/javascript.svg" alt="JavaScript" height="100px"
+            /></span>
+            <span>
+              <img src="img/canva.png" alt="Canva" height="100px" />
+            </span>
+            <span>
+              <img src="img/kanban.png" alt="Kanban" height="100px" />
+            </span>
+            <img src="img/chatGPT.png" alt="chatGPT" height="100px" />
+          </span>
+          <span>
+            <img src="img/google.png" alt="Google" height="100px" />
+          </span>
+          <span>
+            <img
+              src="img/8197855_zoom_social network_communication_network_conversation_icon.png"
+              alt="Zoom"
+              height="100px"
+            />
+          </span>
+          <!-- duplicate to create seamless loop -->
+          <span>
+            <img src="img/vscode.png" alt="vsc" height="90px" />
+          </span>
+          <span
+            ><img src="img/terminal.png" alt="Terminal" height="100px"
+          /></span>
+          <span><img src="img/git.png" alt="GitHub" height="100px" /></span>
+          <span><img src="img/github.png" alt="Git" height="100px" /></span>
+          <span>
+            <span><img src="img/aws.png" alt="aws" height="100px" /></span>
+            <span
+              ><img
+                src="img/firebase_blackText.png"
+                alt="Firebase"
+                height="80px"
+            /></span>
+            <span><img src="img/react.png" alt="React" height="100px" /></span>
+            <span
+              ><img src="img/bootstrap.png" alt="Bootstrap" height="100px" />
+              <span>
+                <img
+                  src="img/8666252_elementor_icon.png"
+                  alt="Elementor"
+                  height="100px"
+                />
+              </span>
+              <img
+                src="img/4375134_logo_yoast_icon.png"
+                alt="Yoast"
+                height="100px"
+              />
+            </span>
+          </span>
+          <img
+            src="img/334823_wordpress_press_social media_word_icon.png"
+            alt="WordPress"
+            height="100px"
+          />
+          <span>
+            <span><img src="img/html.png" alt="HTML" height="100px" /></span>
+            <span><img src="img/css.svg" alt="CSS" height="100px" /></span>
+            <span
+              ><img src="img/javascript.svg" alt="JavaScript" height="100px"
+            /></span>
+            <span>
+              <img src="img/canva.png" alt="Canva" height="100px" />
+            </span>
+            <span>
+              <img src="img/kanban.png" alt="Kanban" height="100px" />
+            </span>
+            <img src="img/chatGPT.png" alt="chatGPT" height="100px" />
+          </span>
+          <span>
+            <img src="img/google.png" alt="Google" height="100px" />
+          </span>
+          <span>
+            <img
+              src="img/8197855_zoom_social network_communication_network_conversation_icon.png"
+              alt="Zoom"
+              height="100px"
+            />
+          </span>
+        </div>
+      </div>
+    </main>
+    <footer class="page-footer">
+      find me on:
+      <div class="social-media">
+        <a
+          href="https://github.com/leanneduyck"
+          target="_blank"
+          class="social-media__item"
+        >
+          <img src="img/git.png" alt="github icon" class="social-media__item" />
+        </a>
+        <img
+          src="img\favicon.svg"
+          alt="plumtree image"
+          class="footer__plumtree-favicon"
+        />
+        <a
+          href="https://linkedin.com/in/leanneduyck/"
+          target="_blank"
+          class="social-media__item"
+        >
+          <img
+            src="img/104493_linkedin_icon.png"
+            alt="linkedin icon"
+            class="social-media__item"
+          />
+        </a>
+      </div>
+      <div>designed and developed by:</div>
+      <div>Leanne Duyck</div>
+      <br />
+      <br />
+      <br />
+      <br />
+    </footer>
+    <script>
+      // home page descriptor list
+      const descriptors = document.querySelectorAll(".descriptor-item");
+      let index = 0;
+
+      function showNextDescriptor() {
+        if (index < descriptors.length) {
+          descriptors[index].classList.add("visible");
+          index++;
+          // 1-second delay between each descriptor
+          setTimeout(showNextDescriptor, 1000);
+        }
+      }
+      // start after a 1-second delay
+      setTimeout(showNextDescriptor, 1000);
+
+      // active navigation link based on scroll position
+      const sections = document.querySelectorAll("section");
+      const navLinks = document.querySelectorAll(".navigation-list__item");
+
+      function setActiveLink() {
+        let index = sections.length;
+
+        while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
+
+        navLinks.forEach((link) => link.classList.remove("active"));
+        navLinks[index].classList.add("active");
+      }
+
+      window.addEventListener("scroll", setActiveLink);
+      window.addEventListener("load", setActiveLink);
+
+      // project text overlay
+      document.querySelectorAll(".grid__item").forEach((item) => {
+        const texts = item.querySelectorAll(".grid__item-text");
+        let currentText = 0;
+        let interval; // Store interval reference
+
+        item.addEventListener("mouseenter", () => {
+          texts.forEach((text) => (text.style.opacity = "0")); // Hide all texts
+          currentText = 0;
+          texts[currentText].style.opacity = "1"; // Show the first text
+
+          interval = setInterval(() => {
+            texts[currentText].style.opacity = "0"; // Hide current text
+
+            // Stop cycling after the second text
+            if (currentText === 1) {
+              texts[currentText].style.opacity = "1"; // Ensure second text stays visible
+              clearInterval(interval); // Stop the interval
+              return; // Exit interval function
+            }
+
+            currentText = (currentText + 1) % texts.length; // Move to next text
+            texts[currentText].style.opacity = "1"; // Show next text
+          }, 2000); // Change text every 2.5 seconds
+        });
+
+        item.addEventListener("mouseleave", () => {
+          clearInterval(interval); // Stop cycling on mouse leave
+          texts.forEach((text) => (text.style.opacity = "0")); // Hide all texts
+        });
+      });
+
+      // section entrance animation
+      document.addEventListener("DOMContentLoaded", () => {
+        const sections = document.querySelectorAll(".section.fade-in");
+
+        const observerOptions = {
+          root: null,
+          threshold: 0.2,
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+              // Delay each section based on its order in the DOM
+              setTimeout(() => {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target); // Stop observing after animation
+              }, index * 3000); // Delay increases per section
+            }
+          });
+        }, observerOptions);
+
+        sections.forEach((section) => observer.observe(section));
+      });
+    </script>
+  </body>
+</html>
+
+<!--  
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -71,11 +598,11 @@
         <div class="profile__description">
           <h2>I am <span class="main-name">Leanne Duyck</span></h2>
           <ul class="descriptor-list">
-            <!-- <li class="descriptor-item">a detail-oriented web developer</li>
+             <li class="descriptor-item">a detail-oriented web developer</li>
             <li class="descriptor-item">a creative problem-solver</li>
             <li class="descriptor-item">an effective communicator</li>
             <li class="descriptor-item">an organized project manager</li>
-            <li class="descriptor-item">an experienced analytical thinker</li> -->
+            <li class="descriptor-item">an experienced analytical thinker</li> 
             <li class="descriptor-item">a user-centered frontend developer</li>
             <li class="descriptor-item">an empathetic technical writer</li>
             <li class="descriptor-item">an effective communicator</li>
@@ -160,3 +687,4 @@
     </script>
   </body>
 </html>
+-->
