@@ -518,13 +518,19 @@ h3 {
 .scrolling_techs {
   display: flex;
   width: 100%;
-  animation: scrolling_techs 25s linear infinite;
+  height: 100px;
+  animation: scrolling_techs 35s linear infinite;
 }
 
 .scrolling_techs span {
   display: flex;
   align-items: center;
   padding: 0 10px;
+}
+
+.scrolling_techs img {
+  width: 100px;
+  height: auto;
 }
 
 @keyframes scrolling_techs {
