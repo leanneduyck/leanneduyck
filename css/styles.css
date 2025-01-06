@@ -787,6 +787,10 @@ h3 {
     text-align: center;
   }
 }
+.scrolling_techs {
+  animation-duration: 10s; /* faster scrolling */
+}
+
 @media (min-width: 501px) and (max-width: 1000px) {
   .grid {
     grid-template-columns: 1fr;
