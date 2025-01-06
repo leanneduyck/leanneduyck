@@ -469,7 +469,9 @@
       // mobile menu toggle
       document.addEventListener("DOMContentLoaded", () => {
         const menuToggle = document.getElementById("menu-toggle");
-        const navigationList = document.querySelector(".navigation-list");
+        const navigationList = document.querySelector(
+          ".navigation-list, .navigation-list__item"
+        );
 
         // Detect if on mobile
         const isMobile = window.matchMedia("(max-width: 500px)").matches;
