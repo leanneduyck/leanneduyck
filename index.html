@@ -93,7 +93,6 @@
               <a
                 href="https://widowsofprayer.wpenginepowered.com/"
                 target="_blank"
-                class="grid__item-link"
               >
                 <img
                   src="img/widows-of-prayer.png"
@@ -115,7 +114,6 @@
               <a
                 href="https://my-movies-angular.vercel.app/welcome"
                 target="_blank"
-                class="grid__item-link"
               >
                 <img
                   src="img/myMovies-Angular-cleaner.png"
@@ -136,7 +134,6 @@
               <a
                 href="https://expo.dev/preview/update?message=readme&updateRuntimeVersion=1.0.0&createdAt=2024-07-14T00%3A52%3A16.822Z&slug=exp&projectId=06dc17ba-4509-4950-90c4-203dcae4ee64&group=a0360ea5-cb19-48a2-9c71-07b2523ac535"
                 target="_blank"
-                class="grid__item-link"
               >
                 <img
                   src="img/chat-app-vertical.png"
@@ -472,10 +469,9 @@
       // project text overlay
       document.querySelectorAll(".grid__item").forEach((item) => {
         const texts = item.querySelectorAll(".grid__item-text");
-        const link = item.querySelector(".grid__item-link");
+        const link = item.querySelector("a"); // Select the project link
         let currentText = 0;
         let interval;
-        let isCycling = false; // Prevent multiple intervals
         let isMobile = window.matchMedia("(max-width: 500px)").matches;
 
         // Start text cycling
@@ -489,26 +485,12 @@
             currentText = (currentText + 1) % texts.length; // Move to next text
             texts[currentText].style.opacity = "1"; // Show next text
           }, 2000); // 2s per text
-          isCycling = true;
         };
 
         // Stop text cycling
         const stopTextCycle = () => {
           clearInterval(interval);
           texts.forEach((text) => (text.style.opacity = "0")); // Hide all texts
-          isCycling = false;
-        };
-
-        // Toggle cycle on mobile
-        const toggleTextCycle = (event) => {
-          if (isMobile) {
-            event.preventDefault(); // Prevent link navigation on mobile
-            if (isCycling) {
-              stopTextCycle();
-            } else {
-              startTextCycle();
-            }
-          }
         };
 
         // Detect screen size and set behavior
@@ -517,12 +499,17 @@
           isMobile = window.matchMedia("(max-width: 500px)").matches;
 
           if (isMobile) {
-            // Mobile: Tap toggles cycle
-            link.addEventListener("click", toggleTextCycle);
+            // Mobile: Prevent link navigation
+            link.addEventListener("click", (event) => {
+              event.preventDefault(); // Disable navigation
+              startTextCycle(); // Start cycling text
+            });
           } else {
-            // Desktop: Hover starts/stops cycle, click navigates
+            // Desktop: Hover starts/stops cycling
             item.addEventListener("mouseenter", startTextCycle);
             item.addEventListener("mouseleave", stopTextCycle);
+
+            // Ensure link works on click
             link.addEventListener("click", (event) => {
               event.stopPropagation(); // Prevent hover events from interfering
               // Let the default navigation happen
