@@ -762,11 +762,12 @@ h3 {
   h3 {
     font-size: 0.7rem;
   }
+  /*
   .page-header {
     align-items: flex-end; /* aligns all items to bottom */
-    margin-top: 0; /* removes space above */
-    padding-top: 0; /* removes space above */
-  }
+  /* margin-top: 0; /* removes space above */
+  /* padding-top: 0; /* removes space above */
+  /* } */
   .page-header__item-logo {
     display: none;
   }
@@ -776,7 +777,7 @@ h3 {
     position: absolute;
     background-color: white; /* temporary - debugging */
   }
-  .navigation-list.active {
+  .navigation-list.active .navigation-list__item {
     display: block;
   }
   .navigation-list,
