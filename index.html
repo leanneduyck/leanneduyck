@@ -429,18 +429,16 @@
       window.addEventListener("load", setActiveLink);
 
       // mobile menu toggle
-      // mobile menu toggle
       document.addEventListener("DOMContentLoaded", () => {
         const menuToggle = document.getElementById("menu-toggle");
-        const navigationList = document.querySelector(
-          ".navigation-list, .navigation-list__item"
-        );
+        const navigationList = document.querySelector(".navigation-list"); // Corrected selector
 
         // Detect if on mobile
         const isMobile = window.matchMedia("(max-width: 500px)").matches;
 
         // Toggle the nav visibility on mobile
         const toggleNav = () => {
+          console.log("Toggling nav"); // Debugging the toggle
           navigationList.classList.toggle("active"); // Toggle 'active' class to show/hide the menu
         };
 

@@ -774,6 +774,7 @@ h3 {
     display: none;
     flex-direction: column;
     position: absolute;
+    background-color: white; /* temporary - debugging */
   }
   .navigation-list.active {
     display: block;
