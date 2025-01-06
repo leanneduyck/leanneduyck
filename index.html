@@ -23,6 +23,7 @@
   <body>
     <header class="page-header">
       <nav>
+        <div class="menu-toggle" id="menu-toggle">☰</div>
         <ul role="menubar" class="navigation-list">
           <li role="presentation">
             <a href="#home" role="menuitem" class="navigation-list__item active"
@@ -469,9 +470,8 @@
       document.querySelectorAll(".grid__item").forEach((item) => {
         const texts = item.querySelectorAll(".grid__item-text");
         let currentText = 0;
-        let interval; // Store interval reference
-
-        // Function to start cycling texts
+        let interval;
+        // Start text cycling
         const startTextCycle = () => {
           texts.forEach((text) => (text.style.opacity = "0")); // Hide all texts
           currentText = 0;
@@ -480,46 +480,31 @@
           interval = setInterval(() => {
             texts[currentText].style.opacity = "0"; // Hide current text
 
-            // Stop cycling after the second text on larger screens (hover mode)
-            if (
-              window.matchMedia("(min-width: 768px)").matches &&
-              currentText === 1
-            ) {
-              texts[currentText].style.opacity = "1"; // Keep the second text visible
-              clearInterval(interval);
-              return;
-            }
-
             currentText = (currentText + 1) % texts.length; // Move to next text
             texts[currentText].style.opacity = "1"; // Show next text
-          }, 2000); // Change text every 2 seconds
+          }, 2000); // 2s per text
         };
-
-        // Stop cycling texts
+        // Stop text cycling
         const stopTextCycle = () => {
           clearInterval(interval);
           texts.forEach((text) => (text.style.opacity = "0")); // Hide all texts
         };
-
-        // For larger screens: Trigger on hover
-        if (window.matchMedia("(min-width: 768px)").matches) {
-          item.addEventListener("mouseenter", startTextCycle);
-          item.addEventListener("mouseleave", stopTextCycle);
-        } else {
-          // For smaller screens: Start automatic cycling
-          startTextCycle();
-        }
-
-        // Adjust behavior on window resize
-        window.addEventListener("resize", () => {
-          stopTextCycle(); // Clear any existing intervals
-          if (window.matchMedia("(min-width: 768px)").matches) {
+        // Detect screen size
+        const setupCycling = () => {
+          stopTextCycle(); // Reset interval
+          if (window.matchMedia("(max-width: 500px)").matches) {
+            // Mobile: Auto cycle
+            startTextCycle();
+          } else {
+            // Desktop: Hover cycle
             item.addEventListener("mouseenter", startTextCycle);
             item.addEventListener("mouseleave", stopTextCycle);
-          } else {
-            startTextCycle(); // Start auto cycle for mobile
           }
-        });
+        };
+        // Initial setup
+        setupCycling();
+        // Adjust on resize
+        window.addEventListener("resize", setupCycling);
       });
 
       // section entrance animation

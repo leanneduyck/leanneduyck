@@ -169,6 +169,12 @@ nav {
   transition-duration: var(--transition-duration);
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
 .section {
   opacity: 0; /* Hidden by default */
   transform: scale(0.9); /* Slightly scaled down */
@@ -756,20 +762,22 @@ h3 {
     padding-top: 0; /* removes space above */
   }
   .page-header__item-logo {
-    display: inline-block;
-    height: 65px;
+    display: none;
   }
   .navigation-list {
-    display: inline-block;
-    width: calc(100% - 75px); /* makes it inline with logo */
-    column-count: 2;
-    column-gap: 20px;
-    padding: 0; /* removes space around */
-    margin: 0; /* removes space around */
+    display: none;
+    flex-direction: column;
+    position: absolute;
+  }
+  .navigation-list.active {
+    display: flex;
   }
   .navigation-list,
   .page-footer {
     font-size: 0.6rem;
+  }
+  .menu-toggle {
+    display: block;
   }
   .descriptor-item {
     font-size: 0.8rem;
@@ -788,7 +796,8 @@ h3 {
   }
 }
 .scrolling_techs {
-  animation-duration: 10s; /* faster scrolling */
+  animation: scrolling_techs 10s linear infinite !important;
+  width: 50%;
 }
 
 @media (min-width: 501px) and (max-width: 1000px) {
