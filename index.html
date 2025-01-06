@@ -466,6 +466,32 @@
       window.addEventListener("scroll", setActiveLink);
       window.addEventListener("load", setActiveLink);
 
+      // mobile menu toggle
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuToggle = document.getElementById("menu-toggle");
+        const navigationList = document.querySelector(".navigation-list");
+
+        // Detect if on mobile
+        const isMobile = window.matchMedia("(max-width: 500px)").matches;
+
+        // Toggle the nav visibility on mobile
+        const toggleNav = () => {
+          navigationList.classList.toggle("active"); // Toggle 'active' class to show/hide the menu
+        };
+
+        // Only add the toggle functionality on mobile
+        if (isMobile) {
+          menuToggle.addEventListener("click", toggleNav);
+        }
+
+        // Ensure the nav is always visible on desktop
+        window.addEventListener("resize", () => {
+          if (!window.matchMedia("(max-width: 500px)").matches) {
+            navigationList.classList.remove("active"); // Remove 'active' class to ensure it's visible on desktop
+          }
+        });
+      });
+
       // project text overlay
       document.querySelectorAll(".grid__item").forEach((item) => {
         const texts = item.querySelectorAll(".grid__item-text");
@@ -482,6 +508,14 @@
 
           interval = setInterval(() => {
             texts[currentText].style.opacity = "0"; // Hide current text
+
+            // Stop cycling after the second text
+            if (currentText === 1) {
+              texts[currentText].style.opacity = "1"; // Keep second text visible
+              clearInterval(interval); // Stop interval
+              return; // Exit interval function
+            }
+
             currentText = (currentText + 1) % texts.length; // Move to next text
             texts[currentText].style.opacity = "1"; // Show next text
           }, 2000); // 2s per text
@@ -546,15 +580,6 @@
         }, observerOptions);
 
         sections.forEach((section) => observer.observe(section));
-      });
-
-      // mobile menu toggle
-      // Toggle Menu
-      const menuToggle = document.getElementById("menu-toggle");
-      const toggleLinks = document.getElementById("navigation-list");
-
-      menuToggle.addEventListener("click", () => {
-        toggleLinks.classList.toggle("active");
       });
     </script>
   </body>
