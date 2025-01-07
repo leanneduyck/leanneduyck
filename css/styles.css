@@ -804,7 +804,6 @@ h3 {
   }
   .grid {
     grid-gap: 10px !important;
-    margin: 0px 10px;
   }
   .grid__item-text {
     font-size: 0.4rem;
@@ -819,6 +818,9 @@ h3 {
   }
   .contact-form {
     margin-bottom: 50px !important;
+  }
+  .page-footer {
+    margin-bottom: 0px !important;
   }
   .scrolling_techs {
     animation: scrolling_techs 10s linear infinite !important;
