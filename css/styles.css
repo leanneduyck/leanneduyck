@@ -812,14 +812,13 @@ h3 {
     margin: 0px 10px;
     text-align: center;
   }
-  .scrolling_techs,
-  .scrolling_techs span {
+  .scrolling_techs {
     animation: scrolling_techs 10s linear infinite !important;
     height: 8vh;
     margin-top: 20px;
   }
   .scrolling_techs img {
-    height: 6vh;
+    height: 5vh;
     width: auto;
   }
 }
