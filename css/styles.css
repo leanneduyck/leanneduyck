@@ -803,7 +803,7 @@ h3 {
     font-size: 0.7rem;
   }
   .grid {
-    grid-gap: 10px !important;
+    grid-gap: 30px !important;
   }
   .grid__item-text {
     font-size: 0.4rem;
