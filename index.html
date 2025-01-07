@@ -397,6 +397,7 @@
       <br />
     </footer>
     <script>
+      // commented out code below for testing
       // home page descriptor list
       const descriptors = document.querySelectorAll(".descriptor-item");
       let index = 0;
@@ -418,7 +419,6 @@
 
       function setActiveLink() {
         let index = sections.length;
-
         while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
 
         navLinks.forEach((link) => link.classList.remove("active"));
@@ -431,26 +431,21 @@
       // mobile menu toggle
       document.addEventListener("DOMContentLoaded", () => {
         const menuToggle = document.getElementById("menu-toggle");
-        const navigationList = document.querySelector(".navigation-list"); // Corrected selector
+        const navigationList = document.querySelector(".navigation-list");
 
-        // Detect if on mobile
-        const isMobile = window.matchMedia("(max-width: 500px)").matches;
-
-        // Toggle the nav visibility on mobile
         const toggleNav = () => {
-          console.log("Toggling nav"); // Debugging the toggle
-          navigationList.classList.toggle("active"); // Toggle 'active' class to show/hide the menu
+          navigationList.classList.toggle("active");
         };
 
-        // Only add the toggle functionality on mobile
-        if (isMobile) {
+        // Always add toggle functionality
+        if (menuToggle) {
           menuToggle.addEventListener("click", toggleNav);
         }
 
-        // Ensure the nav is always visible on desktop
+        // Ensure nav visibility resets on resize
         window.addEventListener("resize", () => {
-          if (!window.matchMedia("(max-width: 500px)").matches) {
-            navigationList.classList.remove("active"); // Remove 'active' class to ensure it's visible on desktop
+          if (window.matchMedia("(min-width: 501px)").matches) {
+            navigationList.classList.remove("active");
           }
         });
       });
@@ -458,70 +453,47 @@
       // project text overlay
       document.querySelectorAll(".grid__item").forEach((item) => {
         const texts = item.querySelectorAll(".grid__item-text");
-        const link = item.querySelector("a"); // Select the project link
+        const link = item.querySelector("a");
+
         let currentText = 0;
         let interval;
-        let isMobile = window.matchMedia("(max-width: 500px)").matches;
 
-        // Start text cycling
         const startTextCycle = () => {
-          texts.forEach((text) => (text.style.opacity = "0")); // Hide all texts
+          texts.forEach((text) => (text.style.opacity = "0"));
           currentText = 0;
-          texts[currentText].style.opacity = "1"; // Show the first text
+          texts[currentText].style.opacity = "1";
 
           interval = setInterval(() => {
-            texts[currentText].style.opacity = "0"; // Hide current text
-
-            // Stop cycling after the second text
-            if (currentText === 1) {
-              texts[currentText].style.opacity = "1"; // Keep second text visible
-              clearInterval(interval); // Stop interval
-              return; // Exit interval function
-            }
-
-            currentText = (currentText + 1) % texts.length; // Move to next text
-            texts[currentText].style.opacity = "1"; // Show next text
-          }, 2000); // 2s per text
+            texts[currentText].style.opacity = "0";
+            currentText = (currentText + 1) % texts.length;
+            texts[currentText].style.opacity = "1";
+          }, 2000);
         };
 
-        // Stop text cycling
         const stopTextCycle = () => {
           clearInterval(interval);
-          texts.forEach((text) => (text.style.opacity = "0")); // Hide all texts
+          texts.forEach((text) => (text.style.opacity = "0"));
         };
 
-        // Detect screen size and set behavior
         const setupCycling = () => {
-          stopTextCycle(); // Reset any existing intervals
-          isMobile = window.matchMedia("(max-width: 500px)").matches;
+          stopTextCycle();
 
-          if (isMobile) {
-            // Mobile: Prevent link navigation
+          if (window.matchMedia("(max-width: 500px)").matches) {
             link.addEventListener("click", (event) => {
-              event.preventDefault(); // Disable navigation
-              startTextCycle(); // Start cycling text
+              event.preventDefault();
+              startTextCycle();
             });
           } else {
-            // Desktop: Hover starts/stops cycling
             item.addEventListener("mouseenter", startTextCycle);
             item.addEventListener("mouseleave", stopTextCycle);
-
-            // Ensure link works on click
-            link.addEventListener("click", (event) => {
-              event.stopPropagation(); // Prevent hover events from interfering
-              // Let the default navigation happen
-            });
           }
         };
 
-        // Initial setup
         setupCycling();
-
-        // Adjust on resize
         window.addEventListener("resize", setupCycling);
       });
 
-      // section entrance animation, desktop only
+      // section entrance animation
       document.addEventListener("DOMContentLoaded", () => {
         const sections = document.querySelectorAll(".section.fade-in");
 
@@ -530,26 +502,171 @@
           threshold: 0.2,
         };
 
-        // Check for mobile size
-        const isMobile = window.matchMedia("(max-width: 500px)").matches;
-
-        // If it's mobile, skip the animation
-        if (isMobile) return;
-
         const observer = new IntersectionObserver((entries, observer) => {
-          entries.forEach((entry, index) => {
+          entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              // Delay each section based on its order in the DOM
-              setTimeout(() => {
-                entry.target.classList.add("visible");
-                observer.unobserve(entry.target); // Stop observing after animation
-              }, index * 3000); // Delay increases per section
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
             }
           });
         }, observerOptions);
 
         sections.forEach((section) => observer.observe(section));
       });
+
+      // // home page descriptor list
+      // const descriptors = document.querySelectorAll(".descriptor-item");
+      // let index = 0;
+
+      // function showNextDescriptor() {
+      //   if (index < descriptors.length) {
+      //     descriptors[index].classList.add("visible");
+      //     index++;
+      //     // 1-second delay between each descriptor
+      //     setTimeout(showNextDescriptor, 1000);
+      //   }
+      // }
+      // // start after a 1-second delay
+      // setTimeout(showNextDescriptor, 1000);
+
+      // // active navigation link based on scroll position
+      // const sections = document.querySelectorAll("section");
+      // const navLinks = document.querySelectorAll(".navigation-list__item");
+
+      // function setActiveLink() {
+      //   let index = sections.length;
+
+      //   while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
+
+      //   navLinks.forEach((link) => link.classList.remove("active"));
+      //   navLinks[index].classList.add("active");
+      // }
+
+      // window.addEventListener("scroll", setActiveLink);
+      // window.addEventListener("load", setActiveLink);
+
+      // // mobile menu toggle
+      // document.addEventListener("DOMContentLoaded", () => {
+      //   const menuToggle = document.getElementById("menu-toggle");
+      //   const navigationList = document.querySelector(".navigation-list"); // Corrected selector
+
+      //   // Detect if on mobile
+      //   const isMobile = window.matchMedia("(max-width: 500px)").matches;
+
+      //   // Toggle the nav visibility on mobile
+      //   const toggleNav = () => {
+      //     console.log("Toggling nav"); // Debugging the toggle
+      //     navigationList.classList.toggle("active"); // Toggle 'active' class to show/hide the menu
+      //   };
+
+      //   // Only add the toggle functionality on mobile
+      //   if (isMobile) {
+      //     menuToggle.addEventListener("click", toggleNav);
+      //   }
+
+      //   // Ensure the nav is always visible on desktop
+      //   window.addEventListener("resize", () => {
+      //     if (!window.matchMedia("(max-width: 500px)").matches) {
+      //       navigationList.classList.remove("active"); // Remove 'active' class to ensure it's visible on desktop
+      //     }
+      //   });
+      // });
+
+      // // project text overlay
+      // document.querySelectorAll(".grid__item").forEach((item) => {
+      //   const texts = item.querySelectorAll(".grid__item-text");
+      //   const link = item.querySelector("a"); // Select the project link
+      //   let currentText = 0;
+      //   let interval;
+      //   let isMobile = window.matchMedia("(max-width: 500px)").matches;
+
+      //   // Start text cycling
+      //   const startTextCycle = () => {
+      //     texts.forEach((text) => (text.style.opacity = "0")); // Hide all texts
+      //     currentText = 0;
+      //     texts[currentText].style.opacity = "1"; // Show the first text
+
+      //     interval = setInterval(() => {
+      //       texts[currentText].style.opacity = "0"; // Hide current text
+
+      //       // Stop cycling after the second text
+      //       if (currentText === 1) {
+      //         texts[currentText].style.opacity = "1"; // Keep second text visible
+      //         clearInterval(interval); // Stop interval
+      //         return; // Exit interval function
+      //       }
+
+      //       currentText = (currentText + 1) % texts.length; // Move to next text
+      //       texts[currentText].style.opacity = "1"; // Show next text
+      //     }, 2000); // 2s per text
+      //   };
+
+      //   // Stop text cycling
+      //   const stopTextCycle = () => {
+      //     clearInterval(interval);
+      //     texts.forEach((text) => (text.style.opacity = "0")); // Hide all texts
+      //   };
+
+      //   // Detect screen size and set behavior
+      //   const setupCycling = () => {
+      //     stopTextCycle(); // Reset any existing intervals
+      //     isMobile = window.matchMedia("(max-width: 500px)").matches;
+
+      //     if (isMobile) {
+      //       // Mobile: Prevent link navigation
+      //       link.addEventListener("click", (event) => {
+      //         event.preventDefault(); // Disable navigation
+      //         startTextCycle(); // Start cycling text
+      //       });
+      //     } else {
+      //       // Desktop: Hover starts/stops cycling
+      //       item.addEventListener("mouseenter", startTextCycle);
+      //       item.addEventListener("mouseleave", stopTextCycle);
+
+      //       // Ensure link works on click
+      //       link.addEventListener("click", (event) => {
+      //         event.stopPropagation(); // Prevent hover events from interfering
+      //         // Let the default navigation happen
+      //       });
+      //     }
+      //   };
+
+      //   // Initial setup
+      //   setupCycling();
+
+      //   // Adjust on resize
+      //   window.addEventListener("resize", setupCycling);
+      // });
+
+      // // section entrance animation, desktop only
+      // document.addEventListener("DOMContentLoaded", () => {
+      //   const sections = document.querySelectorAll(".section.fade-in");
+
+      //   const observerOptions = {
+      //     root: null,
+      //     threshold: 0.2,
+      //   };
+
+      //   // Check for mobile size
+      //   const isMobile = window.matchMedia("(max-width: 500px)").matches;
+
+      //   // If it's mobile, skip the animation
+      //   if (isMobile) return;
+
+      //   const observer = new IntersectionObserver((entries, observer) => {
+      //     entries.forEach((entry, index) => {
+      //       if (entry.isIntersecting) {
+      //         // Delay each section based on its order in the DOM
+      //         setTimeout(() => {
+      //           entry.target.classList.add("visible");
+      //           observer.unobserve(entry.target); // Stop observing after animation
+      //         }, index * 3000); // Delay increases per section
+      //       }
+      //     });
+      //   }, observerOptions);
+
+      //   sections.forEach((section) => observer.observe(section));
+      // });
     </script>
   </body>
 </html>
