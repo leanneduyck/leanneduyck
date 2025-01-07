@@ -812,13 +812,15 @@ h3 {
     margin: 0px 10px;
     text-align: center;
   }
+  .contact-form {
+    margin-bottom: 10px;
+  }
   .scrolling_techs {
     animation: scrolling_techs 10s linear infinite !important;
-    height: 8vh;
-    margin-top: 20px;
+    height: 7vh;
   }
   .scrolling_techs img {
-    height: 5vh;
+    height: 6vh;
     width: auto;
   }
 }
