@@ -817,7 +817,10 @@ h3 {
   }
   .scrolling_techs {
     animation: scrolling_techs 10s linear infinite !important;
-    height: 25%;
+    height: 10vh;
+  }
+  .scrolling_techs img {
+    max-height: 8vh;
   }
 }
 
