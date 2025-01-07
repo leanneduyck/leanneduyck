@@ -802,6 +802,10 @@ h3 {
   .about-name {
     font-size: 0.7rem;
   }
+  .grid {
+    grid-gap: 10px;
+    margin: 0px 10px;
+  }
   .grid__item-text {
     font-size: 0.4rem;
   }
