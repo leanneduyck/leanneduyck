@@ -816,11 +816,11 @@ h3 {
   .scrolling_techs span {
     animation: scrolling_techs 10s linear infinite !important;
     height: 8vh;
-    margin-top: 10px;
+    margin-top: 20px;
   }
   .scrolling_techs img {
-    height: auto;
-    max-height: 100%;
+    height: 6vh;
+    width: auto;
   }
 }
 
