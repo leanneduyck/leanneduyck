@@ -338,6 +338,7 @@ h1 {
   display: flex;
   flex-direction: column;
   text-align: center;
+
   /* margin-bottom: 35px; */
   /* margin-bottom: 100px; */
 }
@@ -346,6 +347,16 @@ h3 {
   display: flex;
   justify-content: center;
   font-size: 1.3rem;
+}
+
+#projects {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+#home {
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 .grid {
@@ -482,6 +493,7 @@ h3 {
   position: relative;
   border-radius: var(--border_radius);
   box-shadow: var(--box-shadow);
+  overflow-x: hidden;
 }
 
 .grid-item__about-img {
@@ -780,11 +792,7 @@ h3 {
   .page-header__item-logo {
     display: none;
   }
-  .navigation-list {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-  }
+
   .navigation-list.active .navigation-list__item {
     display: block;
   }
